@@ -2,20 +2,20 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>A Famosa AR</title>
+    <title>Memorial Merdeka AR</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
   <body style="margin: 0; overflow: hidden;">
     <a-scene
-      mindar-image="imageTargetSrc: ./afamosa.mind;"
+      mindar-image="imageTargetSrc: ./merdeka.mind; filterMinCF: 0.0001; filterBeta: 0.001;"
       color-space="sRGB"
       renderer="colorManagement: true, physicallyCorrectLights"
       vr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: false"
     >
       <a-assets>
-        <a-asset-item id="landmarkModel" src="./AFAMOSA3d-v1.glb"></a-asset-item>
+        <a-asset-item id="landmarkModel" src="./memorial3d-v1.glb"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -24,8 +24,8 @@
         <a-gltf-model
           src="#landmarkModel"
           position="0 0 0"
-          rotation="0 0 0"
-          scale="0.5 0.5 0.5"
+          rotation="90 0 0"
+          scale="0.3 0.3 0.3"
         ></a-gltf-model>
       </a-entity>
     </a-scene>
